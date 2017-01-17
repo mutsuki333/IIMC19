@@ -76,6 +76,7 @@ class Main extends Phaser.State{
       Global.onMap=onTransID;
       this.game.state.start('Reload');
     }
+    player.Action();
 
 
   }

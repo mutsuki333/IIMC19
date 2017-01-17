@@ -35,6 +35,8 @@ class Map_parent {
     state.game.physics.arcade.TILE_BIAS = 20
 
 
+    this.born.x=Global.MapInfo.TransPoint[0][0];
+    this.born.y=Global.MapInfo.TransPoint[0][1];
   }
 
   createTop(){
