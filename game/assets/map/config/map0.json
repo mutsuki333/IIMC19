@@ -1,0 +1,13 @@
+{
+  "MapNum": 0,
+  "json": "map0.json",
+  "Layers": 2,
+  "TransNum": 1,
+  "TransPoint": {
+    "0": [500, 500],
+    "1": [1700, 742, 2]
+  },
+  "source": ["Forest_Tree", "Jungle_terrainwater"],
+  "bg": ["", 1.5 ],
+  "bgm": ["Butter-Fly", 0.5]
+}
