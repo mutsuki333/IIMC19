@@ -1,4 +1,4 @@
-import * as Global from "../functions/GlobalVar"
+import * as Global from "../functions/Global"
 
 class Player_parent extends Phaser.Sprite{
 

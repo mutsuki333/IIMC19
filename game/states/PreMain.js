@@ -14,8 +14,20 @@ class PreMain extends Phaser.State{
     Global.score=10;
     Global.fromMap=0;
     Global.onMap=0;
-    Global.char=undefined;
-    $.getJSON('map/config/map0.json',(data)=>{Global.MapInfo=data;}).then(Func.load(this));
+
+    //load character
+    this.load.spritesheet('spritePix', 'character/heroine.png', 32, 32);
+    //load monster
+    if(Global.onMap!=0){
+
+
+    }
+    //load map
+    this.load.tilemap('tilemap', 'map/json/'+Global.MapInfo.json, null, Phaser.Tilemap.TILED_JSON);
+    for (const pix of Global.MapInfo.source){
+      this.load.image(pix, 'map/tiles/'+pix+'.png');
+    }
+    this.load.image('trans', 'system/trans1.png');
 
   }
 
@@ -26,6 +38,9 @@ class PreMain extends Phaser.State{
     //this.add.plugin(Fabrique.Plugins.InputField);
 
     this.state.start('Main');
+  }
+  load(){
+
   }
 
 }

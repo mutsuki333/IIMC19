@@ -1,4 +1,4 @@
-import * as Global from "../functions/GlobalVar"
+import * as Global from "../functions/Global"
 
 //import Player_parent from '../objects/Player_parent';
 

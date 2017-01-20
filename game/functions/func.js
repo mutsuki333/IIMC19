@@ -77,9 +77,7 @@ class Func{
 
   static load(state){
     //load character
-    if(Global.char!=undefined){
-      state.load.spritesheet('spritePix', 'character/heroine.png', 32, 32);
-    }
+    state.load.spritesheet('spritePix', 'character/heroine.png', 32, 32);
     //load monster
     if(Global.onMap!=0){
 
@@ -88,10 +86,9 @@ class Func{
     //load map
     state.load.tilemap('tilemap', 'map/json/'+Global.MapInfo.json, null, Phaser.Tilemap.TILED_JSON);
     for (const pix of Global.MapInfo.source){
-      state.load.image(pix, 'map/tile/'+pix+'.png');
+      state.load.image(pix, 'map/tiles/'+pix+'.png');
     }
-
-
+    state.load.image('trans', 'system/trans1.png');
   }
 
 }
