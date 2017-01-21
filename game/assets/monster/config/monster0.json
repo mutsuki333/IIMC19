@@ -1,8 +1,8 @@
 {
   "MapNum": 0,
-  "source": ["outside",36, 48],
+  "source": ["skeleton",36, 48],
   "stand": 2,
   "right": [12,13,14,15],
   "left": [4,5,6,7],
-  
+
 }
