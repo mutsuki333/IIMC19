@@ -1,5 +1,5 @@
 {
-  "MapNum": 0,
+  "Monster": 0,
   "source": ["skeleton",36, 48],
   "stand": 2,
   "right": [12,13,14,15],

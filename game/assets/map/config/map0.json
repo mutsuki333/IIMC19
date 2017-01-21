@@ -2,7 +2,6 @@
   "MapNum": 0,
   "json": "test.json",
   "monsLayer": 3,
-  "Layers": 2,
   "TransNum": 1,
   "TransPoint": {
     "0": [500, 500],

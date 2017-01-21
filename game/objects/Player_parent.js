@@ -20,7 +20,7 @@ class Player_parent extends Phaser.Sprite{
     this.jump=250;
     this.bounce=0.1;
     this.gravity=500;
-    this.size=1;
+    this.size_=1;
     this.friction=50;
     this.opacity=1;
 
@@ -75,7 +75,7 @@ class Player_parent extends Phaser.Sprite{
     console.log('setup');
 
   }
-  
+
   skill(){
     if(this.skilled)return;
     this.skilled=true;

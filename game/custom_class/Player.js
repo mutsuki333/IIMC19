@@ -5,11 +5,10 @@ import Player_parent from '../objects/Player_parent';
 class Player extends Player_parent{
   constructor(state, x, y){
     super(state, x, y);
-    this.superMode = true;
+
   }
 
   skill(){
-
 
     super.skill();
   }
