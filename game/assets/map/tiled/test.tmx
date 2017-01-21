@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="50" height="40" tilewidth="32" tileheight="32" nextobjectid="1">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="50" height="40" tilewidth="32" tileheight="32" nextobjectid="96">
  <tileset firstgid="1" name="outside" tilewidth="32" tileheight="32" tilecount="3880" columns="8">
   <image source="../tiles/outside.png" width="256" height="15520"/>
  </tileset>
@@ -223,4 +223,97 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
+ <objectgroup name="monster1">
+  <object id="54" name="monster" x="222" y="98" width="66" height="58">
+   <ellipse/>
+  </object>
+  <object id="68" name="monster" x="1139" y="61" width="66" height="58">
+   <ellipse/>
+  </object>
+  <object id="69" name="monster" x="1265" y="551" width="66" height="58">
+   <ellipse/>
+  </object>
+  <object id="70" name="monster" x="1379" y="1047" width="66" height="58">
+   <ellipse/>
+  </object>
+  <object id="71" name="monster" x="565" y="1059" width="66" height="58">
+   <ellipse/>
+  </object>
+  <object id="72" name="monster" x="569" y="715" width="66" height="58">
+   <ellipse/>
+  </object>
+  <object id="73" name="monster" x="65" y="735" width="66" height="58">
+   <ellipse/>
+  </object>
+  <object id="74" name="monster" x="205" y="383" width="66" height="58">
+   <ellipse/>
+  </object>
+  <object id="75" name="monster" x="699" y="505" width="66" height="58">
+   <ellipse/>
+  </object>
+  <object id="76" name="monster" x="871" y="285" width="66" height="58">
+   <ellipse/>
+  </object>
+  <object id="77" name="monster" x="1501" y="187" width="66" height="58">
+   <ellipse/>
+  </object>
+ </objectgroup>
+ <objectgroup name="monster2">
+  <object id="78" name="monster" x="465" y="73" width="66" height="58">
+   <ellipse/>
+  </object>
+  <object id="79" name="monster" x="377" y="363" width="66" height="58">
+   <ellipse/>
+  </object>
+  <object id="80" name="monster" x="423" y="715" width="66" height="58">
+   <ellipse/>
+  </object>
+  <object id="81" name="monster" x="817" y="733" width="66" height="58">
+   <ellipse/>
+  </object>
+  <object id="82" name="monster" x="811" y="1057" width="66" height="58">
+   <ellipse/>
+  </object>
+  <object id="83" name="monster" x="1135" y="1053" width="66" height="58">
+   <ellipse/>
+  </object>
+  <object id="84" name="monster" x="1043" y="921" width="66" height="58">
+   <ellipse/>
+  </object>
+  <object id="85" name="monster" x="1165" y="551" width="66" height="58">
+   <ellipse/>
+  </object>
+  <object id="86" name="monster" x="1375" y="359" width="66" height="58">
+   <ellipse/>
+  </object>
+  <object id="87" name="monster" x="161" y="927" width="66" height="58">
+   <ellipse/>
+  </object>
+ </objectgroup>
+ <objectgroup name="monster3">
+  <object id="88" name="monster" x="355" y="79" width="66" height="58">
+   <ellipse/>
+  </object>
+  <object id="89" name="monster" x="75" y="371" width="66" height="58">
+   <ellipse/>
+  </object>
+  <object id="90" name="monster" x="425" y="1039" width="66" height="58">
+   <ellipse/>
+  </object>
+  <object id="91" name="monster" x="965" y="1051" width="66" height="58">
+   <ellipse/>
+  </object>
+  <object id="92" name="monster" x="683" y="1057" width="66" height="58">
+   <ellipse/>
+  </object>
+  <object id="93" name="monster" x="871" y="507" width="66" height="58">
+   <ellipse/>
+  </object>
+  <object id="94" name="monster" x="1267" y="63" width="66" height="58">
+   <ellipse/>
+  </object>
+  <object id="95" name="monster" x="1277" y="1061" width="66" height="58">
+   <ellipse/>
+  </object>
+ </objectgroup>
 </map>

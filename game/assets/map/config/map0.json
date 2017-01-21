@@ -1,13 +1,14 @@
 {
   "MapNum": 0,
   "json": "test.json",
+  "monsLayer": 3,
   "Layers": 2,
   "TransNum": 1,
   "TransPoint": {
     "0": [500, 500],
-    "1": [1700, 742, 2, true]
+    "1": [500, 800, 2, true]
   },
   "source": ["outside"],
-  "bg": ["", 1.5 ],
+  "bg": ["sky", 1.6 ],
   "bgm": ["Butter-Fly", 0.5]
 }

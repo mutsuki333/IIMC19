@@ -4,9 +4,9 @@ import Func from "../functions/func"
 class Map_parent {
   constructor(state){
     this.state = state;
-    let bg = state.game.add.sprite(0, 0, Global.MapInfo.bg[0]);
-    bg.scale.setTo(Global.MapInfo.bg[1]);
-    bg.fixedToCamera = true;
+    this.bg = state.game.add.sprite(0, 0, 'bg');
+    this.bg.scale.setTo(Global.MapInfo.bg[1]);
+    this.bg.fixedToCamera = true;
 
     this.map = state.game.add.tilemap('tilemap');
     for (const pix of Global.MapInfo.source){
@@ -22,7 +22,7 @@ class Map_parent {
     this.monsBound = this.map.createLayer('monsBound');
 
 
-    this.map.setCollisionByExclusion([0], true, this.base);
+    // this.map.setCollisionByExclusion([0], true, this.base);
     this.map.setCollisionByExclusion([0], true, this.monsBound);
     this.map.setCollisionByExclusion([0], true, this.collide);
     Func.setTileCollisionForAll(this.collide, {
@@ -30,7 +30,7 @@ class Map_parent {
       bottom: false,
       left: false,
       right: false
-    })
+    });
     state.game.physics.arcade.TILE_BIAS = 20
 
 

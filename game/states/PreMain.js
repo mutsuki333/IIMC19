@@ -17,16 +17,16 @@ class PreMain extends Phaser.State{
 
     //load character
     this.load.spritesheet('spritePix', 'character/heroine.png', 32, 32);
+    this.load.image('eraser', 'system/eraser.png');
     //load monster
-    if(Global.onMap!=0){
+    this.load.spritesheet('mons', 'monster/skeleton.png', 36, 48);
 
-
-    }
     //load map
     this.load.tilemap('tilemap', 'map/json/'+Global.MapInfo.json, null, Phaser.Tilemap.TILED_JSON);
     for (const pix of Global.MapInfo.source){
       this.load.image(pix, 'map/tiles/'+pix+'.png');
     }
+    this.load.image('bg', 'map/tiles/'+Global.MapInfo.bg[0]+'.png');
     this.load.image('trans', 'system/trans1.png');
 
   }

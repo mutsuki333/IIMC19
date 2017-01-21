@@ -58,7 +58,7 @@ class Func{
       for (let i = 0; i < d.length; i++) {
           for (let j = 0; j < d[i].length; j++) {
               let t = d[i][j];
-              if (t.index!==0) {
+              if (t.index>0) {
 
                   t.collideUp = dirs.top;
                   t.collideDown = dirs.bottom;
