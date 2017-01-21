@@ -1,13 +1,15 @@
 import * as Global from "../functions/Global"
 import Func from "../functions/func"
+import MonsterChild from "../objects/MonsterChild"
 import _Monster from "../custom_class/Monster"
 import _Map from "../custom_class/Map"
-
 import _Player from "../custom_class/Player"
 
 let map,player,mons;
 let state;
 let jump, cursors, attack, skill;
+
+let scoreText, scoretmp, collections;
 
 //map
 let bg, base, collide, trans, monsBound;
@@ -16,6 +18,9 @@ let bg, base, collide, trans, monsBound;
 let onTrans;
 // flags num
 let onTransID;
+
+// flag player
+let immortal=false;
 
 
 class Main extends Phaser.State{
@@ -70,13 +75,15 @@ class Main extends Phaser.State{
 
     mons = new _Monster(this);
     for(let i=0;i<Global.MapInfo.monsLayer;i++){
-      map.createFromObjects('monster'+(i+1), 'monster', 'mons', 2, true, true, mons, Phaser.Sprite);
+      map.createFromObjects('monster'+(i+1), 'monster', 'mons', 2, true, true, mons, MonsterChild);
       mons.setupMons();
     }
+    mons.reborn();
+    mons.forEach((b)=>{b.resetFlag();});
+
+    immortal=false;
 
 
-    // player = this.game.add.sprite(map.bx,map.by,'spritePix');
-    //player = this.game.add.sprite(500,500,'spritePix');
     player = new _Player(this, 500, 500);
     player.setup();
 
@@ -86,8 +93,18 @@ class Main extends Phaser.State{
     player.inputEnabled = true;
     player.events.onInputOver.add(this.getPoint, this);
 
-
+    let style = {
+      font: 'bold 45px Arial',
+      align: 'center',
+      strokeThickness: 5,
+      fill: '#f9eb1d'
+    }
     map.createLayer('top');
+    scoretmp = Global.score;
+    scoreText = this.game.add.text(this.game.camera.x+this.game.camera.width/2,0, 'Score: '+scoretmp, style);
+    scoreText.anchor.set(0.5,0);
+    scoreText.fixedToCamera = true;
+
 
 
     jump = this.game.input.keyboard.addKey(Phaser.Keyboard.ALT);
@@ -105,7 +122,7 @@ class Main extends Phaser.State{
 
     this.game.physics.arcade.collide(player, base);
     this.game.physics.arcade.collide(player, collide);
-    this.game.physics.arcade.collide(player, mons, this.MhitP);
+    if(!immortal)this.game.physics.arcade.overlap(player, mons, this.MhitP);
 
     this.game.physics.arcade.collide(mons, player.weapon.bullets, this.hitMons);
 
@@ -131,12 +148,18 @@ class Main extends Phaser.State{
       player.SkillPressed=true;
     }
 
+    if(scoretmp!=Global.score){
+      scoretmp = Global.score;
+      scoreText.setText('Score: '+scoretmp)
+    }
+
     if (cursors.up.isDown && player.body.onFloor() && onTrans){
       console.log('ontrans: '+ onTransID);
       // Global.fromMap=GlobalVar.onMap;
       // Global.onMap=onTransID;
       // this.game.state.start('Reload');
     }
+    mons.Action();
     player.Action();
 
 
@@ -157,8 +180,15 @@ class Main extends Phaser.State{
   }
 
   MhitP(p, m){
-    Global.score-=10;
-    if(Global.score<=0)state.game.state.start('PreMain');
+    if(immortal)return;
+    if(!p.superMode)Global.score-=10;
+    immortal = true;
+    p.body.velocity.y=-250;
+    if(p.x>m.x)p.body.velocity.x=300;
+    else p.body.velocity.x=-300;
+    if(p.alpha==p.opacity)p.alpha/=3;
+    if(Global.score<=0){state.game.state.start('PreMain');return;}
+    setTimeout(()=>{immortal = false; player.alpha=player.opacity;}, 1000);
   }
 
   getPoint(){

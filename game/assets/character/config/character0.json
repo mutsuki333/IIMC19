@@ -1,0 +1,7 @@
+{
+  "Character": 0,
+  "source": ["heroine",32, 32],
+  "stand": 1,
+  "right": [6, 7, 8],
+  "left": [3, 4, 5]
+}
