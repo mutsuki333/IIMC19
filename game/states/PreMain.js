@@ -16,7 +16,7 @@ class PreMain extends Phaser.State{
     Global.onMap=0;
 
     //load character
-    this.load.spritesheet('spritePix', Global.char.source[0], Global.char.source[1], Global.char.source[2]);
+    this.load.spritesheet('spritePix', 'character/'+Global.char.source[0]+'.png', Global.char.source[1], Global.char.source[2]);
     this.load.image('eraser', 'system/eraser.png');
     //load monster
     // this.load.spritesheet('mons', '/monster/skeleton.png', 36, 48);
@@ -28,7 +28,7 @@ class PreMain extends Phaser.State{
       this.load.image(pix, 'map/tiles/'+pix+'.png');
     }
     this.load.image('bg', 'map/tiles/'+Global.MapInfo.bg[0]+'.png');
-    this.load.audio('bgm', 'sound/'Global.MapInfo.bgm[0]+'.mp3');
+    this.load.audio('bgm', 'sound/'+Global.MapInfo.bgm[0]+'.mp3');
     this.load.image('trans', 'system/trans1.png');
 
   }

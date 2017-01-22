@@ -26,7 +26,9 @@ let immortal=false;
 class Main extends Phaser.State{
 
   create(){
-    Global.bgm = this.game.add.audio.('bgm', Global.MapInfo.bgm[1],true);
+    state = this;
+    Global.bgm = this.game.add.audio('bgm', Global.MapInfo.bgm[1],true);
+    Global.bgm.play();
     this.game.stage.backgroundColor = '#fff';
     // map = new _Map(this);
 
