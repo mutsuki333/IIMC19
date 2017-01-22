@@ -11,10 +11,10 @@ class Boot extends Phaser.State {
       Global.MapInfo=data;
       $.getJSON('monster/config/monster0.json',(data)=>{
         Global.MonsInfo=data;
-        // $.getJSON('character/config/character0.json',(data)=>{
-          // Global.char=data;
+        $.getJSON('character/config/character0.json',(data)=>{
+          Global.char=data;
           this.game.state.start('PreMain');
-        // });
+        });
       });
     });
 
