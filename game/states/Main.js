@@ -2,7 +2,6 @@ import * as Global from "../functions/Global"
 import Func from "../functions/func"
 import MonsterChild from "../objects/MonsterChild"
 import _Monster from "../custom_class/Monster"
-import _Map from "../custom_class/Map"
 import _Player from "../custom_class/Player"
 
 let map,player,mons;

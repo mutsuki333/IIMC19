@@ -7,9 +7,9 @@ class Monster extends Monster_parent{
     super(state);
     /*
     */
-    // this.speed=150;
-    // this.jump=250;
-    // this.bounce=0.1;
+    this.speed=250;
+    this.jump=500;
+    this.bounce=1;
     // this.gravity=500;
     // this.size=1;
     // this.friction=50;

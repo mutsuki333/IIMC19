@@ -22,7 +22,7 @@ class Player extends Player_parent{
     // this.bulletGravity = 0;
     // this.bulletSize = 1;
     //
-    // this.superMode = true;
+    this.superMode = true;
 
 
     /*
